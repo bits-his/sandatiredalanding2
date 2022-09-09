@@ -1,0 +1,37 @@
+.container {
+    position: relative;
+}
+.kano {
+    position: absolute;
+    color: orange;
+    margin-left: 290px;
+    margin-top: -415px;
+}
+
+.kaduna {
+    position: absolute;
+    color: orange;
+    margin-left: 260px;
+    margin-top: -340px;
+}
+
+.jigawa {
+    position: absolute;
+    color: orange;
+    margin-left: 340px;
+    margin-top: -440px;
+}
+
+.yobe {
+    position: absolute;
+    color: orange;
+    margin-left: 430px;
+    margin-top: -435px;
+}
+
+.katsina {
+    position: absolute;
+    color: orange;
+    margin-left: 245px;
+    margin-top: -450px;
+}
