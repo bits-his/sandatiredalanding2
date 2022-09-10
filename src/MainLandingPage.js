@@ -325,7 +325,7 @@ const Block = ({ notifyIsVisible, components }) => {
                   width="100%"
                   ref={ref => (componentBlockRefs[component.url] = ref)}
                   onLoad={e => updateComponentBlockIframeHeight(e.target)}
-                />
+                ></iframe>  
               </ResizableBox>
             </ComponentContent>
           </Component>
