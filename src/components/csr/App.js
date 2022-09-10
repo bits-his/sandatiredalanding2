@@ -12,7 +12,7 @@ import ruwaImg2 from "../../images/ruwa2.jpg";
 // sandaKirana.jpg
 
 export default function CSR() {
-  const Description = tw.span`inline-block mt-8 text-white`;
+  const Description = tw.span`inline-block mt-8 text-appcolor`;
   const HighlightedTextInverse = tw.span`bg-gray-100 text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
 
