@@ -10,7 +10,7 @@ import Footer from "components/footers/FiveColumnWithInputForm.js";
 import "./style.css";
 import gidaImg from "../../images/gida.jpg";
 export default function Map() {
-  const Description = tw.span`inline-block mt-8 text-white`;
+  const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
   const HighlightedTextInverse = tw.span`bg-gray-100 text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
 

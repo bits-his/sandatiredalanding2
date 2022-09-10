@@ -1,10 +1,6 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import {
-  SectionHeading,
-  Subheading as SubheadingBase,
-} from "components/misc/Headings.js";
 const Container = styled.div((props) => [
   props.bg ? tw`bg-appcolor` : tw`bg-appcolorfaded`,
   tw`-mx-8 px-5`,

@@ -8,14 +8,14 @@ import { ContentWithPaddingXl, Container as ContainerBase } from "components/mis
 import { SectionHeading } from "components/misc/Headings.js";
 import googlePlayIconImageSrc from "images/google-play-icon.png"
 
-const Container = tw(ContainerBase)`bg-appcolor -mx-8`
+const Container = tw(ContainerBase)`bg-white -mx-8`
 const Content = tw(ContentWithPaddingXl)``
 const Row = tw.div`px-8 flex items-center relative z-10 flex-col lg:flex-row text-center lg:text-left justify-center`;
 
 const ColumnContainer = tw.div`max-w-2xl`
 const TextContainer = tw(ColumnContainer)``;
 // const Text = tw(SectionHeading)`text-gray-100 lg:text-left max-w-none text-lg leading-snug`;
-const Subheading = tw(SectionHeading)`text-yellow-500 mb-4 tracking-wider text-3xl`
+const Subheading = tw(SectionHeading)`mb-4 tracking-wider text-3xl`
 
 const LinksContainer = tw.div`mt-8 lg:mt-16 flex flex-col items-center sm:block`
 const Link = styled.a`
@@ -28,7 +28,7 @@ const Link = styled.a`
   }
 `;
 
-const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-white`;
+const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-appcolorfaded`;
 
 
 const ImageContainer = tw(ColumnContainer)`mt-16 lg:mt-0 lg:ml-16 flex justify-end`;

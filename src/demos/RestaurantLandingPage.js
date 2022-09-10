@@ -17,7 +17,7 @@ import heroImage from "images/sandatireda-building.png";
 import motorCycleImgSrc from "images/app/bikers.jpeg";
 
 export default () => {
-  const HighlightedText = tw.span`bg-appcolor text-white px-4 transform -skew-x-12 inline-block`;
+  const HighlightedText = tw.span`bg-appcolorfaded text-white px-4 transform -skew-x-12 inline-block`;
   const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
   const imageCss = tw`rounded-4xl`;
   return (

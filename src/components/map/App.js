@@ -15,7 +15,7 @@ import sdgImgThree from "../../images/33.jpg";
 import aspirationImgOne from "../../images/3.jpg";
 
 export default function Map() {
-  const Description = tw.span`inline-block mt-8 text-white`;
+  const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
   const HighlightedText = tw.span`bg-appcolor text-white px-4 transform -skew-x-12 inline-block`;
   const HighlightedTextInverse = tw.span`bg-gray-100 text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;

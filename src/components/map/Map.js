@@ -17,7 +17,7 @@ const Map = () => {
   //hhs
 
   const [selectedShop, setSelectedShop] = useState(null);
-  const [shops, setShops] = useState({});
+  const [shops] = useState({});
 
   // const [selectedView, setSelectedView] = useState(styleList[0].name);
   const [mapStyle] = useState(styleList[0].style);
@@ -48,17 +48,6 @@ const Map = () => {
   //   setSelectedView(value);
   // };
 
-  const getData = () => {
-    fetch(
-      "https://yge.wvi.mybluehost.me/sanda-map-api/v1/get-points?query_type=points&from=1&to=100000&limit=100000"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        if (data?.row_to_json?.data) {
-          setShops(data.row_to_json.data);
-        }
-      });
-  };
 
   // useEffect(() => {
   //   if (!shops.features) getData();

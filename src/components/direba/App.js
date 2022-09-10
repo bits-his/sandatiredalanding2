@@ -9,8 +9,8 @@ import "./style.css";
 import busImg from "../../images/bus.jpg";
 
 export default function Direba() {
-  const Description = tw.span`inline-block mt-8 text-white`;
-  const HighlightedText = tw.span`bg-appcolor text-white px-4 transform -skew-x-12 inline-block`;
+  const Description = tw.span`inline-block mt-8 text-appcolor`;
+  const HighlightedText = tw.span`bg-white text-appcolorfaded px-4 transform -skew-x-12 inline-block`;
   const HighlightedTextInverse = tw.span`bg-gray-100 text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
 
@@ -41,7 +41,7 @@ export default function Direba() {
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
       />
       <Features
-        bg="appColor"
+        bg="white"
         cards={[
           {
             title: "Uwar Gida",

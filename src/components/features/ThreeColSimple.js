@@ -15,7 +15,7 @@ const Container = styled.div((props) => [
   props.bg ? tw`bg-appcolor` : tw`bg-appbg`,
   tw`-mx-8 px-5`,
 ]);
-const Heading = tw(SectionHeading)``;
+const Heading = tw(SectionHeading)`text-appcolor`;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
 const Description = tw(SectionDescription)`text-center mx-auto`;
 const ThreeColumnContainer = styled.div`
