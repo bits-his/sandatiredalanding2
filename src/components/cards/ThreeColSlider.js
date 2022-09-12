@@ -170,3 +170,21 @@ export default () => {
     </Container>
   );
 };
+
+
+
+{/* import cormart from 'images/app/partners/cormart.png'
+import fanmilk from 'images/app/partners/fanmilk.png'
+import perfetti from 'images/app/partners/perfetti.png'
+import tgi from 'images/app/partners/tgi-logo.png'
+import bonita from 'images/app/partners/bonita.png'
+import mcpl from 'images/app/partners/mcpl.png'
+import chi from 'images/app/partners/chi.png'
+import caraway from 'images/app/partners/caraway.png'
+import checkers from 'images/app/partners/checkers.png'
+import wasil from 'images/app/partners/wasil.png'
+import sonia from 'images/app/partners/sonia.png'
+import wacot from 'images/app/partners/wacot.png'
+import bua from 'images/app/partners/bua.png'
+import mamada from 'images/app/partners/mamada.png'
+import pz from 'images/app/partners/pz.jpeg' */}
