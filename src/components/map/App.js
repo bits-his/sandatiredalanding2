@@ -13,10 +13,13 @@ import sdgImgOne from "../../images/1.jpg";
 import sdgImgTwo from "../../images/2.jpg";
 import sdgImgThree from "../../images/33.jpg";
 import aspirationImgOne from "../../images/3.jpg";
+import aspirationImgSix from "../../images/au_aspirations_6png.png";
+import SDGsContainer from "components/features/SDGs_container";
+import AuAspirations from "components/features/AuAspirations";
 
 export default function Map() {
   const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
-  const HighlightedText = tw.span`bg-appcolor text-white px-4 transform -skew-x-12 inline-block`;
+  const HighlightedText = tw.span`text-appcolor px-4 transform -skew-x-12 inline-block`;
   const HighlightedTextInverse = tw.span`bg-gray-100 text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
   var appcolor = "#F37021";
@@ -25,12 +28,6 @@ export default function Map() {
   return (
     <AnimationRevealPage>
       <Header />
-      <Feature
-        heading2={<span tw="text-appcolor">Mission</span>}
-        description2="To empower micro, small and medium enterprises through the use of technology"
-        heading1={<span tw="text-appcolor">Vision</span>}
-        description1="To create a business environment where micro, small and medium enterprises will thrive across Nigeria."
-      />
       <MainFeature
         showMap={false}
         bg={appcolor}
@@ -69,22 +66,48 @@ export default function Map() {
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
       />
-      <MainFeature2
-        // subheading={<Subheading>Distribution Operations</Subheading>}
-        heading={<>Sustainable Development Goals (SDGs)</>}
-        bg={false}
-    
-        buttonRounded={false}
-        textOnLeft={false}
-        // primaryButtonText="Become a Kirana"
-        imageSrc={sdgImgOne}
-        imageCss={imageCss}
-        imageSrc2={sdgImgTwo}
-        imageSrc3={sdgImgThree}
-        imageDecoratorBlob={true}
-        imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
+      <Feature
+        heading2={<span tw="text-appcolor">Mission</span>}
+        description2="To empower micro, small and medium enterprises through the use of technology"
+        heading1={<span tw="text-appcolor">Vision</span>}
+        description1="To create a business environment where micro, small and medium enterprises will thrive across Nigeria."
       />
-      <MainFeature2
+      <SDGsContainer
+        heading={
+          <>
+            Sustainable Development Goals (SDGs)
+          </>
+        }
+        cards={[
+          {
+            // imageSrc: shopIconImageSrc,
+            title: "Convenience",
+            description:
+              "We eliminate the need to travel to the market by delivering inventory to their shops free of charge.",
+            // url: "https://google.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Microcredit",
+            description:
+              "We offer credit of up to 200,000 naira in inventory to each Kirana Store on a 30-day cycle. ",
+            // url: "https://timerse.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Ease of Use",
+            description:
+              "We have a user-friendly mobile phone application where all orders from franchise stores are made.Increased Earning Capacity for Micro-Entrepreneurs.",
+            // url: "https://timerse.com"
+          },
+        ]}
+        imageContainerCss={tw`p-2!`}
+        imageCss={tw`w-20! h-20!`}
+        imgList={[sdgImgOne, sdgImgTwo, sdgImgThree]}
+
+      />
+     
+      <AuAspirations
         // subheading={<Subheading>Distribution Operations</Subheading>}
         heading={
           <>African Union Development Agency-NEPAD (AUDA-NEPAD) Aspirations </>
@@ -100,6 +123,7 @@ export default function Map() {
         primaryButtonUrl="https://order.now.com"
         imageInsideDiv={false}
         imageSrc={aspirationImgOne}
+        image2Src={aspirationImgSix}
         imageCss={Object.assign(tw`bg-cover`, imageCss)}
         imageContainerCss={tw`md:w-1/2 h-auto`}
         imageDecoratorBlob={true}
@@ -132,13 +156,14 @@ export default function Map() {
             // imageSrc: chefIconImageSrc,
             title: "Ease of Use",
             description:
-              "We have a user-friendly mobile phone application where all orders from franchise stores are made.Increased Earning Capacity for Micro-Entrepreneurs.",
+              "We have a user-friendly mobile phone application where all orders from franchise stores are made. Increased Earning Capacity for Micro-Entrepreneurs.",
             // url: "https://timerse.com"
           },
         ]}
         imageContainerCss={tw`p-2!`}
         imageCss={tw`w-20! h-20!`}
       />
+      
       
       <DownloadApp
         text={

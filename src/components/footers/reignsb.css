@@ -1,0 +1,13 @@
+/* .callmesadiqharuna {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    cursor: pointer;
+} */
+
+.bottom {
+    display: flex;
+    gap: 2rem;
+    align-items: start;
+    /* font-family: 'Times New Roman', Times, serif; */
+}

@@ -9,6 +9,7 @@ import {
 // import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import "../features/states.css";
+import { LogoLink } from "components/headers/light";
 
 const Container = styled.div((props) => [
   props.bg ? tw`bg-white` : tw`bg-appcolorfaded`,
@@ -70,6 +71,14 @@ export default ({
     <Container bg={bg}>
       <TwoColumn>
         <TextColumn textOnLeft={textOnLeft}>
+          <LogoLink 
+          className="container"
+          css={imageCss}
+          src={imageSrc}
+          imageBorder={imageBorder}
+          imageShadow={imageShadow}
+          imageRounded={imageRounded}
+          />
           <TextContent>
             <Heading>{heading}</Heading>
             <Description>{description}</Description>

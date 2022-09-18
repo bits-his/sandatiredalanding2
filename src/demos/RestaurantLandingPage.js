@@ -3,7 +3,6 @@ import tw from "twin.macro";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithVideo.js";
 import MainFeature from "components/features/TwoColWithButton.js";
-import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import Feature from "components/features/TwoColWithTwoTextColumn.js";
 import TabGrid from "components/cards/TabCardGrid.js";
 import Testimonial from "components/testimonials/SimplePrimaryBackground.js";
@@ -14,10 +13,11 @@ import Portfolio from "components/cards/PortfolioTwoCardsWithImage.js";
 import ProfileThreeColGrid from "components/cards/ProfileThreeColGrid.js";
 import truckImgSrc from "images/app/truck4.png";
 import heroImage from "images/sandatireda-building.png";
-import motorCycleImgSrc from "images/app/bikers.jpeg";
+import Testimonial2 from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
+import SliderTest from "components/cards/ProductsSlider";
 
 export default () => {
-  const HighlightedText = tw.span`bg-appcolorfaded text-white px-4 transform -skew-x-12 inline-block`;
+  const HighlightedText = tw.span` text-appcolor px-4 transform -skew-x-12 inline-block`;
   const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
   const imageCss = tw`rounded-4xl`;
   return (
@@ -53,6 +53,7 @@ export default () => {
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
       />
+      
       <Feature
         heading1={<span tw="text-appcolor">Vision</span>}
         heading2={<span tw="text-appcolor">Mission</span>}
@@ -60,44 +61,6 @@ export default () => {
         description1="To become a leading agent of development for sole traders and businesses trading food and household consumer goods."
       />
       <TabGrid heading={<>Our Products</>} />
-      <MainFeature2
-        heading={<>Distribution Operations</>}
-        statistics={[
-          {
-            key: "Orders",
-            value: "94000+",
-          },
-          {
-            key: "Customers",
-            value: "11000+",
-          },
-          {
-            key: "Chefs",
-            value: "1500+",
-          },
-        ]}
-        description={
-          <Description>
-            The company’s operations cover Kano, Jigawa, Katsina, Kaduna and
-            Yobe States. To support its retail and distribution operations,
-            Sanda Tireda operates a dedicated fleet of vans and
-            motorcycles.
-            <br />
-            <br />
-            The fleet is insured and equipped with GPS tracking and fuel
-            management systems.
-          </Description>
-        }
-        primaryButtonText="Order Now"
-        primaryButtonUrl="https://order.now.com"
-        imageInsideDiv={false}
-        imageSrc={motorCycleImgSrc}
-        imageCss={Object.assign(tw`bg-cover`, imageCss)}
-        imageContainerCss={tw`md:w-1/2 h-auto`}
-        imageDecoratorBlob={true}
-        imageDecoratorBlobCss={tw`left-1/2 md:w-32 md:h-32 -translate-x-1/2 opacity-25`}
-        textOnLeft={true}
-      />
       <Portfolio />
       <BlogIndexPage />
       <DownloadApp
@@ -114,6 +77,7 @@ export default () => {
         }
       />
       <ProfileThreeColGrid />
+      <SliderTest />
       <Testimonial
         subheading=""
         heading={

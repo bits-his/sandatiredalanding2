@@ -10,9 +10,11 @@ import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
 import "./style.css";
 import gidaImg from "../../images/gida.jpg";
+import logo1 from "../../images/app/logo1.png";
+import UwargidaVideoSection from "components/features/UwargidaVideoSection";
 export default function Map() {
   const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
-  const HighlightedTextInverse = tw.span`bg-gray-100 text-appcolor px-4 transform -skew-x-12 inline-block`;
+  const HighlightedTextInverse = tw.span`text-appcolorfaded px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
 
   return (
@@ -22,13 +24,14 @@ export default function Map() {
       <MainFeature
         showMap={false}
         bg="appcolor"
-        heading={<></>}
+        heading={<><img src={logo1} alt="logo" className="ReignsB" /></>}
         description={
           <Description>
             <HighlightedTextInverse>Uwar Gida</HighlightedTextInverse>
             &nbsp; Similar to Kirana’s, this business unit is a womencooperative-based initiative that identifies at home traders and provides goods on credit for onward sales to house wives.  This creates  business opportunities for women from the comfort of their homes hence the name ‘Uwargida’ meaning mother of the house.
           </Description>
         }
+
         buttonRounded={false}
         textOnLeft={false}
         primaryButtonText="Latest Offers"
@@ -43,7 +46,8 @@ export default function Map() {
         heading2={<span tw="text-appcolor">Mission</span>}
         description2="To empower women-owned enterprises and to enhance capacity development through the use of technology."
       />
-      <MainFeature2
+      {/* <UwargidaVideoSection /> */}
+      <UwargidaVideoSection
         heading={<></>}
         bg="appbg"
         description={

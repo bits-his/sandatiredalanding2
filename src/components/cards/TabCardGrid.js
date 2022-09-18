@@ -29,6 +29,7 @@ import renew_detergent from "images/items/none-foods/renew-washing-machine-deter
 import kleansol from "images/items/none-foods/kleansol.jpeg";
 import corysan_handwash from "images/items/none-foods/corysan-handwash.jpeg";
 import spark_classic_cleaner from "images/items/none-foods/spark-classic-cleaner.jpeg";
+import ProductsSlider from "./ProductsSlider";
 
 const HeaderRow = tw.div`flex justify-between items-center flex-col xl:flex-row`;
 const Header = tw(SectionHeading)``;
@@ -173,6 +174,27 @@ export default ({
     "Food Items": [],
     "Non Food Items": [],
   });
+
+  const getItems = async (cat) => {
+    try {
+      const request = await fetch(`https://yge.wvi.mybluehost.me/test/sanda-server/account/get/catalogue?query_type=by_cat&category=${cat}`)
+      return await request.json()
+    } catch (error) {
+      return error
+    }
+  }
+
+  useEffect(() => {
+    getItems('FOO').then(it => setItemList(p => ({
+      ...p, "Food Items": it.results
+    }))).catch(err => console.log("Error fetching item images"))
+
+    getItems('NON').then(it => setItemList(p => ({
+      ...p, "Non Food Items": it.results
+    }))).catch(err => console.log("Error fetching item images"))
+    
+  }, [])
+  
   /*
    * To customize the tabs, pass in data using the `tabs` prop. It should be an object which contains the name of the tab
    * as the key and value of the key will be its content (as an array of objects).
@@ -183,34 +205,34 @@ export default ({
 
   const [showCount,] = useState(5);
 
-  useEffect(() => {
-    getItems()
-      .then((data) => {
-        // setList(data)
-        console.log(data);
-        if (data.results && data.results.length) {
-          let _food = [];
-          let _nonFood = [];
+  // useEffect(() => {
+  //   getItems()
+  //     .then((data) => {
+  //       // setList(data)
+  //       console.log(data);
+  //       if (data.results && data.results.length) {
+  //         let _food = [];
+  //         let _nonFood = [];
 
-          data.results.forEach((i) => {
-            // console.log(i)
-            if (i.group_code === "FOO" && i.item_image !== "") {
-              _food.push(i);
-            } else if (i.group_code === "NON" && i.item_image !== "") {
-              _nonFood.push(i);
-            }
-          });
+  //         data.results.forEach((i) => {
+  //           // console.log(i)
+  //           if (i.group_code === "FOO" && i.item_image !== "") {
+  //             _food.push(i);
+  //           } else if (i.group_code === "NON" && i.item_image !== "") {
+  //             _nonFood.push(i);
+  //           }
+  //         });
 
-          setItemList({
-            "Food Items": _food,
-            "Non Food Items": _nonFood,
-          });
-        }
-      })
-      .catch((err) => {
-        console.log("Error");
-      });
-  }, []);
+  //         setItemList({
+  //           "Food Items": _food,
+  //           "Non Food Items": _nonFood,
+  //         });
+  //       }
+  //     })
+  //     .catch((err) => {
+  //       console.log("Error");
+  //     });
+  // }, []);
 
   return (
     <Container>
@@ -230,6 +252,7 @@ export default ({
         </TabsControl>
       </HeaderRow>
       {/* {JSON.stringify(itemsList)} */}
+      {/* <ProductsSlider /> */}
       {tabsKeys.map((tabKey, index) => (
         <TabContent
           key={index}
@@ -249,47 +272,8 @@ export default ({
           initial={activeTab === tabKey ? "current" : "hidden"}
           animate={activeTab === tabKey ? "current" : "hidden"}
         >
-          {tabs[tabKey].slice(0, showCount).map((card, index) => (
-            <CardContainer key={index}>
-              <Card
-                className='group'
-                href={card.url}
-                initial='rest'
-                whileHover='hover'
-                animate='rest'
-              >
-                <CardImageContainer imageSrc={card.imageSrc}>
-                  {/* <CardRatingContainer>
-                      <CardRating>
-                        <StarIcon />
-                        {card.rating}
-                      </CardRating>
-                      <CardReview>({card.reviews})</CardReview>
-                    </CardRatingContainer> */}
-                  {/* <CardHoverOverlay
-                    variants={{
-                      hover: {
-                        opacity: 1,
-                        height: "auto",
-                      },
-                      rest: {
-                        opacity: 0,
-                        height: 0,
-                      },
-                    }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <CardButton>More Info</CardButton>
-                  </CardHoverOverlay> */}
-                </CardImageContainer>
-                {/* <CardText>
-                    <CardTitle>{card.title}</CardTitle>
-                    <CardContent>{card.content}</CardContent>
-                    <CardPrice>{card.price}</CardPrice>
-                  </CardText> */}
-              </Card>
-            </CardContainer>
-          ))}
+          {/* {JSON.stringify(itemsList)} */}
+          <ProductsSlider imgList={itemsList[tabKey].slice(0, showCount).map(a => 'https://yge.wvi.mybluehost.me/test/sanda-server/uploads/' + a.item_image)} />
         </TabContent>
       ))}
       {/* <center>

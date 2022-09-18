@@ -28,7 +28,7 @@ const TextContent = tw.div`lg:py-8 text-center md:text-left`;
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading
-)`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`;
+)`text-appcolor pt-6`;
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-lg font-medium leading-relaxed text-white`;
 const DecoratorBlob = styled(SvgDotPattern)((props) => [
   tw`w-20 h-20 absolute right-0 bottom-0 transform translate-x-1/2 translate-y-1/2 fill-current text-appcolor -z-10`,
@@ -75,6 +75,7 @@ export default ({
   return (
     <>
     <Container bg={bg}>
+    {heading && <Heading>{heading}</Heading>}
       <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
         <ImageColumn css={imageContainerCss}>
           {imageInsideDiv ? (
@@ -87,7 +88,7 @@ export default ({
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
             {subheading && <Subheading>{subheading}</Subheading>}
-            <Heading>{heading}</Heading>
+            {/* <Heading>{heading}</Heading> */}
             <Description>{description}</Description>
             {/* <Statistics>
               {statistics.map((statistic, index) => (
@@ -104,7 +105,7 @@ export default ({
         </TextColumn>
       </TwoColumn>
     </Container>
-        <Container bg={bg}>
+        {/* <Container bg={bg}>
         <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
           <ImageColumn css={imageContainerCss}>
             {imageInsideDiv ? (
@@ -129,7 +130,7 @@ export default ({
           </ImageColumn>
          
         </TwoColumn>
-      </Container>
+      </Container> */}
       </>
   );
 };

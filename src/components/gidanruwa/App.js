@@ -9,13 +9,14 @@ import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js"
 import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
 import "./style.css";
-import ruwaImg from "../../images/ruwa.jpg";
+import pipe from "../../images/new8.jpg";
+import Watertank from "../../images/new9.jpg";
 import ruwaImg2 from "../../images/ruwa2.jpg";
 import waterguard from "../../images/waterguard.png";
 
 export default function Ruwa() {
   const Description = tw.span`inline-block mt-8 text-appcolor`;
-  const HighlightedTextInverse = tw.span`bg-gray-100 text-appcolor px-4 transform -skew-x-12 inline-block`;
+  const HighlightedTextInverse = tw.span` text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
 
   return (
@@ -36,7 +37,7 @@ export default function Ruwa() {
         buttonRounded={false}
         textOnLeft={false}
         primaryButtonText="Latest Offers"
-        imageSrc={ruwaImg}
+        imageSrc={pipe}
         imageCss={imageCss}
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
@@ -63,7 +64,7 @@ export default function Ruwa() {
         primaryButtonText="Order Now"
         primaryButtonUrl="https://order.now.com"
         imageInsideDiv={false}
-        imageSrc={ruwaImg2}
+        imageSrc={Watertank}
         imageCss={Object.assign(tw`bg-cover`, imageCss)}
         imageContainerCss={tw`md:w-1/2 h-auto`}
         imageDecoratorBlob={true}

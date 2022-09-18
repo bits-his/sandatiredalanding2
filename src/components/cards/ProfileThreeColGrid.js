@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import Slider from "react-slick";
 import tw from "twin.macro";
@@ -23,9 +24,8 @@ import mamada from 'images/app/partners/mamada.png'
 import pz from 'images/app/partners/pz.jpeg'
 
 
-
-const Container = tw.div`relative`;
-const Content = tw.div`max-w-screen-xl mx-auto py-20 lg:py-10`;
+const Container = tw.div`relative max-w-screen-xl`;
+const Content = tw.div`max-w-screen-xl mx-auto py-16 lg:py-20`;
 
 const HeadingWithControl = tw.div`flex flex-col items-center sm:items-stretch sm:flex-row justify-between`;
 const Heading = tw(SectionHeading)``;
@@ -51,11 +51,9 @@ const CardSlider = styled(Slider)`
 const Card = tw.div`h-full flex! flex-col sm:border max-w-sm sm:rounded-tl-4xl sm:rounded-br-5xl relative focus:outline-none`;
 const CardImage = styled.div(props => [
   `background-image: url("${props.imageSrc}");`,
-  tw`w-full h-56 sm:h-64 bg-cover bg-center rounded sm:rounded-none sm:rounded-tl-4xl`
+  tw`w-64 h-64 sm:h-64 bg-cover bg-center rounded sm:rounded-none sm:rounded-tl-4xl`
 ]);
 
-const TextInfo = tw.div`py-6 sm:px-10 sm:py-6`;
-const TitleReviewContainer = tw.div`flex flex-col sm:flex-row sm:justify-between sm:items-center`;
 const Title = tw.h5`text-2xl font-bold`;
 
 
@@ -67,7 +65,7 @@ export default () => {
   const [sliderRef, setSliderRef] = useState(null);
   const sliderSettings = {
     arrows: false,
-    slidesToShow: 3,
+    slidesToShow: 4,
     responsive: [
       {
         breakpoint: 1280,
@@ -97,7 +95,7 @@ export default () => {
     },
     {
       imageSrc: bonita,
-      title: "Bonitas Teats",
+      title: "Bonita's Treatsx",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Ibiza, Spain",
       pricingText: "USD 50/Day",
@@ -113,7 +111,7 @@ export default () => {
     },
     {
       imageSrc: cormart,
-      title: " c o r m a r t ",
+      title: " Cormart Nigeria",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Arizona, RAK",
       pricingText: "USD 99/Day",
@@ -121,7 +119,7 @@ export default () => {
     },
     {
       imageSrc: fanmilk,
-      title: "f a n m i l k",
+      title: "Fan Milk PLC",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Arizona, RAK",
       pricingText: "USD 99/Day",
@@ -129,7 +127,7 @@ export default () => {
     },
     {
       imageSrc: perfetti,
-      title: " p e r f e t t i ",
+      title: " Perfetti Van Melle",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Arizona, RAK",
       pricingText: "USD 99/Day",
@@ -161,7 +159,7 @@ export default () => {
     },
     {
       imageSrc: wasil,
-      title: " W a s l i l",
+      title: "WASIL (West African Soy Industries Limited)",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Arizona, RAK",
       pricingText: "USD 99/Day",
@@ -169,7 +167,7 @@ export default () => {
     },
     {
       imageSrc: sonia,
-      title: "S o n i a",
+      title: "Sonia Foods Industries",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Arizona, RAK",
       pricingText: "USD 99/Day",
@@ -177,7 +175,7 @@ export default () => {
     },
     {
       imageSrc: wacot,
-      title: "W a c o t  R i c e",
+      title: "Wacot Limited",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Arizona, RAK",
       pricingText: "USD 99/Day",
@@ -185,7 +183,7 @@ export default () => {
     },
     {
       imageSrc: bua,
-      title: "B u a  F o o d s",
+      title: "BUA Food Products",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Arizona, RAK",
       pricingText: "USD 99/Day",
@@ -193,7 +191,7 @@ export default () => {
     },
     {
       imageSrc: mamada,
-      title: "M a m u d a",
+      title: "Mamuda Industries Nigeria",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Arizona, RAK",
       pricingText: "USD 99/Day",
@@ -201,7 +199,7 @@ export default () => {
     },
     {
       imageSrc: pz,
-      title: "P z  C u s s o n s",
+      title: "PZ Cussons Nigeria Plc",
       description: "Lorem ipsum dolor sit amet, consectur dolori adipiscing elit, sed do eiusmod tempor nova incididunt ut labore et dolore magna aliqua.",
       locationText: "Arizona, RAK",
       pricingText: "USD 99/Day",
@@ -213,7 +211,7 @@ export default () => {
     <Container>
       <Content>
         <HeadingWithControl>
-          <Heading>Popular Hotels</Heading>
+          <Heading>Our Partners</Heading>
           <Controls>
             <PrevButton onClick={sliderRef?.slickPrev}><ChevronLeftIcon/></PrevButton>
             <NextButton onClick={sliderRef?.slickNext}><ChevronRightIcon/></NextButton>
@@ -223,13 +221,13 @@ export default () => {
           {cards.map((card, index) => (
             <Card key={index}>
               <CardImage imageSrc={card.imageSrc} />
-              <TextInfo>
+              {/* <TextInfo>
                 <TitleReviewContainer>
                   <Title>{card.title}</Title>
                 </TitleReviewContainer>
                 <SecondaryInfoContainer>
                 </SecondaryInfoContainer>
-              </TextInfo>
+              </TextInfo> */}
             
             </Card>
           ))}
@@ -238,3 +236,16 @@ export default () => {
     </Container>
   );
 };
+
+{/* import bonita_chips from "images/items/foods/bonita-coconut-chips.jpg";
+import carisun from "images/items/foods/caprisun.jpg";
+import chi_exotic from "images/items/foods/chi-exotic-can.jpg";
+import chi_exotic2 from "images/items/foods/Chi-exotic-150ml-Juice.jpg";
+import terra1 from "images/items/foods/golden-terra5-oil.jpg";
+import terra2 from "images/items/foods/item7.jpeg";
+import indome_sp from "images/items/foods/item8.jpeg";
+import mentos from "images/items/foods/mentos.jpeg";
+import aptamil4 from "images/items/foods/aptamil4.jpeg";
+import big_bull from "images/items/foods/big-bull.jpeg";
+import scatch_bite from "images/items/none-foods/scotch-brite.jpeg";
+import rene_starch from "images/items/none-foods/rene-starch.jpeg"; */}
