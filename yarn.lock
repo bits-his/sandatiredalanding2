@@ -3217,6 +3217,11 @@
   "resolved" "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
   "version" "2.3.1"
 
+"classnames@~1.2.0":
+  "integrity" "sha512-aGuzgdoQvsYMu3gfdPyCqb0KadipwsvWTRlODYoLckoHCQHmIg7iyEiGpIVmi1odvqXD1ynokF00m5KEPoEwGg=="
+  "resolved" "https://registry.npmjs.org/classnames/-/classnames-1.2.2.tgz"
+  "version" "1.2.2"
+
 "clean-css@^5.2.2":
   "integrity" "sha512-lCr8OHhiWCTw4v8POJovCoh4T7I9U11yVsPjMWWnnMmp9ZowCxyad1Pathle/9HjaDp+fdQKjO9fQydE6RHTZg=="
   "resolved" "https://registry.npmjs.org/clean-css/-/clean-css-5.3.1.tgz"
@@ -7894,6 +7899,13 @@
     "raf" "^3.4.1"
     "regenerator-runtime" "^0.13.9"
     "whatwg-fetch" "^3.6.2"
+
+"react-bootstrap-dropdown@^0.3.0":
+  "integrity" "sha512-WmU7Sacpfn0zzZnZuM898bLgrLSrLdoQsg/++HsQ+OV6B9MTsQ4xr3K/VulLfJOKhlnmV+U6WRw0KdVxGwLExg=="
+  "resolved" "https://registry.npmjs.org/react-bootstrap-dropdown/-/react-bootstrap-dropdown-0.3.0.tgz"
+  "version" "0.3.0"
+  dependencies:
+    "classnames" "~1.2.0"
 
 "react-dev-utils@^12.0.1":
   "integrity" "sha512-84Ivxmr17KjUupyqzFode6xKhjwuEJDROWKJy/BthkL7Wn6NJ8h4WE6k/exAv6ImS+0oZLRRW5j/aINMHyeGeQ=="
