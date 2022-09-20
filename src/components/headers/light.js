@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import tw from "twin.macro";
 import styled from "styled-components";
@@ -10,11 +12,13 @@ import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 import logo from "../../images/app/logo.png";
 import { ReactComponent as MenuIcon } from "feather-icons/dist/icons/menu.svg";
 import { ReactComponent as CloseIcon } from "feather-icons/dist/icons/x.svg";
+import { DropdownToggle, NavbarToggler } from "reactstrap";
 
 const Header = tw.header`
   flex justify-between items-center
   max-w-screen-xl mx-auto
 `;
+
 
 export const NavLinks = tw.div`inline-block`;
 
@@ -60,7 +64,7 @@ export const DesktopNavLinks = tw.nav`
   hidden lg:flex flex-1 justify-between items-center
 `;
 
-export default ({
+export default  ({
   roundedHeaderButton = false,
   logoLink,
   links,
@@ -69,6 +73,8 @@ export default ({
 }) => {
   const history = useHistory();
   const location = useLocation();
+  const [open, setOpen] = useState(false)
+  const toggle = () => setOpen(!open)
 
   const checkActive = (path) => location.pathname === path;
 
@@ -105,46 +111,48 @@ export default ({
       >
         Partners
       </NavLink>
-      <NavLink
+      <button onClick={toggle} className="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Bussiness Unit</button>
+      {open &&<><NavLink
         href="/#link"
         onClick={(e) => {
           e.preventDefault();
           history.push("/kirana-locations");
-        }}
+        } }
         active={checkActive("/kirana-locations")}
+        id="dropdownNavbar" className="hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style={{position: 'absolute', inset: '0px auto auto 0px', margin: '0px', transform: "translate(0px, 282px)"}}
       >
         Kirana
-      </NavLink>
-      <NavLink
+      </NavLink><NavLink
         href="/#link"
         onClick={(e) => {
           e.preventDefault();
           history.push("/kirana-uwar-gida");
-        }}
+        } }
         active={checkActive("/kirana-uwar-gida")}
       >
-        Uwar Gida
-      </NavLink>
-      <NavLink
-        href="/#link"
-        onClick={(e) => {
-          e.preventDefault();
-          history.push("/kirana-direba");
-        }}
-        active={checkActive("/kirana-direba")}
-      >
-        Direba
-      </NavLink>
-      <NavLink
-        href="/#link"
-        onClick={(e) => {
-          e.preventDefault();
-          history.push("/kirana-ruwangida");
-        }}
-        active={checkActive("/kirana-ruwangida")}
-      >
-        Ruwangida
-      </NavLink>
+          Uwar Gida
+        </NavLink><NavLink
+          href="/#link"
+          onClick={(e) => {
+            e.preventDefault();
+            history.push("/kirana-direba");
+          } }
+          active={checkActive("/kirana-direba")}
+        >
+
+          Direba
+        </NavLink><NavLink
+          href="/#link"
+          onClick={(e) => {
+            e.preventDefault();
+            history.push("/kirana-ruwangida");
+          } }
+          active={checkActive("/kirana-ruwangida")}
+        >
+          Ruwangida
+        </NavLink></>}
+      
+      
       <NavLink
         href="/#link"
         onClick={(e) => {

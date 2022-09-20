@@ -1,3 +1,4 @@
+/* eslint-disable no-lone-blocks */
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import Slider from "react-slick";

@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable no-unused-vars */
 import React, { lazy, useEffect } from "react";
 // import { MdAddShoppingCart } from "react-icons/md";
 import { Redirect, Route, Switch } from "react-router";

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import tw from "twin.macro";
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
@@ -9,6 +10,7 @@ import Footer from "components/footers/FiveColumnWithInputForm.js";
 import "./style.css";
 import ruwaImg from "../../images/ruwa.jpg";
 import ruwaImg2 from "../../images/ruwa2.jpg";
+import Headers from "components/header/Header";
 // sandaKirana.jpg
 
 export default function CSR() {
@@ -18,7 +20,8 @@ export default function CSR() {
 
   return (
     <AnimationRevealPage>
-      <Header />
+      {/* <Header /> */}
+      <Headers />
 
       <MainFeature
         showMap={false}
