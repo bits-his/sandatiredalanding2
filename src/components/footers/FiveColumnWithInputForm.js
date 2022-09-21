@@ -35,10 +35,13 @@ const CompanyDescription = tw.p`mt-4 max-w-xs font-medium text-sm mx-auto md:mx-
 
 const SocialLinksContainer = tw.div`mt-4 `;
 const SocialLink = styled.a`
-  ${tw`cursor-pointer inline-block p-2 rounded-full bg-gray-700 text-gray-100 hover:bg-gray-900 transition duration-300 mr-4`}
+  ${tw`cursor-pointer inline-block p-4 rounded-full bg-gray-700 text-gray-100 hover:bg-gray-900 transition duration-300 mr-2`}
   svg {
     ${tw`w-4 h-4`}
   }
+`;
+const Stores = styled.a`
+  ${tw`cursor-pointer rounded-full transition duration-300`}
 `;
 
 export default () => {
@@ -64,26 +67,29 @@ export default () => {
               <YoutubeIcon />
             </SocialLink>
           </SocialLinksContainer>
-          <div>
+          <Stores href="https://play.google.com/store/apps/details?id=com.sunda.tireda">
+            <img src={store} alt="store icon" style={{width: 160, }} />
+          </Stores>
+          <Stores href="/#">
+          <img src={apple} alt="store icon" style={{width: 160, paddingTop: "10px"}} />
+          </Stores>
+          {/* <div>
           <div 
-            style={{width: 160, height: 50, backgroundColor: 'black', borderRadius: 10, cursor: "pointer",
-            display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>
-              {/* <div> 
-                <p style={{color:"white", fontSize: 12, marginBottom: 0, marginTop: 2}}>Get App on</p>
-                <p style={{color:"white", fontSize: 25, fontFamily: "Roboto"}}>Google</p>
-              </div> */}
+            style={{width: 160, height: 50, cursor: "pointer",
+              justifyContent: 'space-around'}}>
+              <SocialLink href="">
               <img  src={store} alt="store icon" />
+              </SocialLink>
+              
             </div>
             <div
-            style={{width: 160, height: 50, backgroundColor: 'black', borderRadius: 10, cursor: "pointer",
-            display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around'}}>
-              {/* <div> 
-                <p style={{color:"white", fontSize: 12, marginBottom: 0, marginTop: 2}}>Get App on</p>
-                <p style={{color:"white", fontSize: 25, fontFamily: "Roboto"}}>Google</p>
-              </div> */}
+            style={{width: 160, height: 50, cursor: "pointer",
+             justifyContent: 'space-around', paddingTop: '12px'}}>
+              <Link href="www.goggle.com">
               <img src={apple} alt="store icon" />
+              </Link>
             </div>
-          </div>
+          </div> */}
         </WideColumn>
         <Column>
           <ColumnHeading>Links</ColumnHeading>
@@ -92,13 +98,13 @@ export default () => {
               <Link href="/">Home</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="contact-us">Contact Us</Link>
+              <Link href="about-us">About Us</Link>
             </LinkListItem>
             <LinkListItem>
               <Link href="our-partners">Partners</Link>
             </LinkListItem>
             <LinkListItem>
-              <Link href="about-us">About Us</Link>
+              <Link href="contact-us">Contact Us</Link>
             </LinkListItem>
           </LinkList>
         </Column>

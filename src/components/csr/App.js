@@ -20,8 +20,8 @@ export default function CSR() {
 
   return (
     <AnimationRevealPage>
-      {/* <Header /> */}
-      <Headers />
+      <Header />
+      {/* <Headers /> */}
 
       <MainFeature
         showMap={false}

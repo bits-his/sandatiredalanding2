@@ -6,6 +6,8 @@ import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { useHistory, useLocation } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 
 import useAnimatedNavToggler from "../../helpers/useAnimatedNavToggler.js";
 
@@ -29,6 +31,24 @@ export const NavLink = styled.a((props) => [
   tw`text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
   font-semibold tracking-wide transition duration-300 
   pb-1 border-b-2 border-transparent hover:border-appcolor hocus:text-appcolor`,
+  props.active
+    ? tw`lg:text-appcolor md:text-white sm:text-white`
+    : tw`lg:text-white md:text-appcolor sm:text-appcolor`,
+]);
+
+export const LinkMe = styled.a((props) => [
+  tw`font-semibold tracking-wide transition duration-300 
+  pb-1 border-b-2 border-transparent hocus:text-appcolor
+  `,
+  props.active
+    ? tw`lg:text-appcolor md:text-white sm:text-white`
+    : tw`lg:text-white md:text-appcolor sm:text-appcolor`,
+]);
+
+export const NavLink1 = styled.a((props) => [
+  tw`text-lg my-2 lg:text-sm lg:mx-6 lg:my-0
+  font-semibold tracking-wide transition duration-300 
+  `,
   props.active
     ? tw`lg:text-appcolor md:text-white sm:text-white`
     : tw`lg:text-white md:text-appcolor sm:text-appcolor`,
@@ -111,48 +131,19 @@ export default  ({
       >
         Partners
       </NavLink>
-      <button onClick={toggle} className="flex justify-between items-center py-2 pr-4 pl-3 w-full font-medium text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Bussiness Unit</button>
-      {open &&<><NavLink
-        href="/#link"
-        onClick={(e) => {
-          e.preventDefault();
-          history.push("/kirana-locations");
-        } }
-        active={checkActive("/kirana-locations")}
-        id="dropdownNavbar" className="hidden z-10 w-44 font-normal bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700 dark:divide-gray-600" data-popper-reference-hidden="" data-popper-escaped="" data-popper-placement="bottom" style={{position: 'absolute', inset: '0px auto auto 0px', margin: '0px', transform: "translate(0px, 282px)"}}
-      >
-        Kirana
-      </NavLink><NavLink
-        href="/#link"
-        onClick={(e) => {
-          e.preventDefault();
-          history.push("/kirana-uwar-gida");
-        } }
-        active={checkActive("/kirana-uwar-gida")}
-      >
-          Uwar Gida
-        </NavLink><NavLink
-          href="/#link"
-          onClick={(e) => {
-            e.preventDefault();
-            history.push("/kirana-direba");
-          } }
-          active={checkActive("/kirana-direba")}
-        >
+      <Dropdown as={LinkMe}>
+      <Dropdown.Toggle id="dropdown-basic" as={NavLink}>
+      Bussiness Unit
+      </Dropdown.Toggle>
 
-          Direba
-        </NavLink><NavLink
-          href="/#link"
-          onClick={(e) => {
-            e.preventDefault();
-            history.push("/kirana-ruwangida");
-          } }
-          active={checkActive("/kirana-ruwangida")}
-        >
-          Ruwangida
-        </NavLink></>}
-      
-      
+      <Dropdown.Menu as={NavLink}>
+        <Dropdown.Item href="/kirana-locations" as={LinkMe} >Kirana</Dropdown.Item>
+        <Dropdown.Item href="/kirana-uwar-gida" as={LinkMe}>Uwar Gida</Dropdown.Item>
+        <Dropdown.Item href="/kirana-direba" as={LinkMe}>Direba</Dropdown.Item>
+        <Dropdown.Item href="/kirana-ruwangida" as={LinkMe}>Ruwangida</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+     
       <NavLink
         href="/#link"
         onClick={(e) => {
@@ -239,6 +230,7 @@ export default  ({
           )}
         </NavToggle>
       </MobileNavLinksContainer>
+      
     </Header>
   );
 };
