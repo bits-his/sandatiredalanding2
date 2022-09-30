@@ -14,12 +14,12 @@ module.exports = {
       transparent: 'transparent',
 
       black: '#000',
-      white: '#FFCC2A',
+      white: '#800000',
       // white: '#fff',
 
-      appcolor: '#e65e0c',
+      appcolor: ' #800000',
       appcolorfaded:'#fff',
-      appbg: '#fff',
+      appbg: '#800000',
 
       // appcolor: '#F37021',
       // appcolorfaded:'#fef0e7',

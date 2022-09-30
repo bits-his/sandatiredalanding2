@@ -14,8 +14,8 @@ import gidaImg from "../../images/gida.jpg";
 import logo1 from "../../images/app/logo1.png";
 import UwargidaVideoSection from "components/features/UwargidaVideoSection";
 export default function Map() {
-  const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
-  const HighlightedTextInverse = tw.span`text-appcolorfaded px-4 transform -skew-x-12 inline-block`;
+  const Description = tw.span`inline-block mt-8 text-appcolor`;
+  const HighlightedTextInverse = tw.span`text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
 
   return (
@@ -50,7 +50,7 @@ export default function Map() {
       {/* <UwargidaVideoSection /> */}
       <UwargidaVideoSection
         heading={<></>}
-        bg="appbg"
+        bg="appcolorfaded"
         description={
           <Description>
             Women are provided the opportunity to expand their small businesses

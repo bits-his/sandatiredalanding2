@@ -16,7 +16,7 @@ import { Testimonial } from 'components/testimonials/TwoColumnWithImageAndProfil
 
 export default function Direba() {
   const Description = tw.span`inline-block mt-8 text-appcolor`;
-  const HighlightedText = tw.span`bg-white px-4 transform -skew-x-12 inline-block`;
+  const HighlightedText = tw.span`bg-appcolorfaded px-4 transform -skew-x-12 inline-block`;
   const HighlightedTextInverse = tw.span`bg-gray-100 text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
 
@@ -50,7 +50,7 @@ export default function Direba() {
       />
       <MainFeature
         showMap={false}
-        bg={true}
+        bg={false}
         heading={<>Uwar Gida</>}
         description={
           <Description>
@@ -85,11 +85,25 @@ export default function Direba() {
 
       <MainFeature
         showMap={false}
-        bg={true}
+        bg={false}
         heading={<>Sanda Tireda Routes</>}
         description={
-          <Description>
-      <ol>
+          <Description> 
+            <div className="table">
+              <table>
+              <tbody className="tbody1">Hotoro – Bata</tbody>
+            <tbody className="tbody1">Katsina Road</tbody>
+            <tbody className="tbody1">Zaria Road</tbody>
+              </table>
+              <table>
+              <tbody className="tbody1">Hotoro – IBB Way</tbody>
+            <tbody className="tbody1">Sharada</tbody>
+            <tbody className="tbody1">Hadeja Road</tbody>
+            <tbody className="tbody1">Kwana Hudu</tbody>
+              </table>
+           
+            </div>
+      {/* <ol>
       <li>Hotoro – Bata</li>
       <li>Hotoro – IBB Way</li>
       <li>Zaria Road</li>
@@ -97,7 +111,7 @@ export default function Direba() {
       <li>Sharada</li>
       <li>Hadeja Road</li>
       <li>Kwana Hudu</li>
-     </ol>  
+     </ol>   */}
           </Description>
         }
       />
@@ -129,7 +143,7 @@ export default function Direba() {
       /> */}
 
       <Features
-        bg="appcolor"
+        bg=""
 
         heading={
           <>

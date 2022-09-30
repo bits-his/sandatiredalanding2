@@ -8,7 +8,7 @@ import {
 import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 // const Container = tw.div`bg-appcolor -mx-8 px-5`;
 const Container = styled.div((props) => [
-  props.bg ? tw`bg-white` : tw`bg-appbg`,
+  props.bg ? tw`bg-appcolorfaded` : tw`bg-appbg`,
   tw`-mx-8 px-5`,
 ]);
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -24,7 +24,7 @@ const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
   tw`rounded bg-contain bg-no-repeat bg-center h-full`,
 ]);
-const TextContent = tw.div`lg:py-8 text-center md:text-left`;
+const TextContent = tw.div`lg:py-8 text-center md:text-center`;
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading

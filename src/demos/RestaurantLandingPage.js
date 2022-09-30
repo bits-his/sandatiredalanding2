@@ -19,7 +19,7 @@ import SliderTest from "components/cards/ProductsSlider";
 
 export default () => {
   const HighlightedText = tw.span` text-appcolor px-4 transform -skew-x-12 inline-block`;
-  const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
+  const Description = tw.span`inline-block mt-8 text-appcolor`;
   const imageCss = tw`rounded-4xl`;
   return (
     <AnimationRevealPage>
@@ -34,7 +34,7 @@ export default () => {
       />
       <MainFeature
         showMap={false}
-        bg="appcolorfaded"
+        bg=""
         heading={<></>}
         description={
           <Description>
@@ -46,13 +46,13 @@ export default () => {
             Sanda Tireda is the trusted Northern Nigeria distribution partner for key manufacturers and trading companies such as Tropical Group Investment, Multipro, FAN/Danone, Perfetti and PZ Cussons to mention a few..
           </Description>
         }
-        buttonRounded={false}
-        textOnLeft={false}
-        primaryButtonText="Latest Offers"
-        imageSrc={truckImgSrc}
-        imageCss={imageCss}
-        imageDecoratorBlob={true}
-        imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
+        // buttonRounded={false}
+        // textOnLeft={false}
+        // primaryButtonText="Latest Offers"
+        // imageSrc={truckImgSrc}
+        // imageCss={imageCss}
+        // imageDecoratorBlob={true}
+        // imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
       />
       
       <Feature

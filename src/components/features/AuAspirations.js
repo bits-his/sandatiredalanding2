@@ -10,7 +10,7 @@ import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import YoutubeEmbed from '../social/VideoEmbaded';
 // const Container = tw.div`bg-appcolor -mx-8 px-5`;
 const Container = styled.div((props) => [
-  props.bg ? tw`bg-white` : tw`bg-appbg`,
+  props.bg ? tw`bg-appcolorfaded` : tw`bg-appbg`,
   tw`-mx-8 px-5 py-8`,
 ]);
 

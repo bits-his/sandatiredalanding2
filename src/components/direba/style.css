@@ -5,3 +5,17 @@
   height: 20%;
   width: 20%;
 }
+.table {
+  /* border: 2px solid #e65e0c;   
+  border-radius: 4px; */
+  display: flex;
+  color:  #800000;
+  /* padding: 5px;
+  color: red; */
+  /* color: #e65e0c;
+  float: left;
+  margin-right: 12px; */
+}
+/* .tbody1 {
+  border: 2px solid #e65e0c;
+} */

@@ -19,7 +19,7 @@ import SDGsContainer from "components/features/SDGs_container";
 import AuAspirations from "components/features/AuAspirations";
 
 export default function Map() {
-  const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
+  const Description = tw.span`inline-block mt-8 text-appcolor`;
   const HighlightedText = tw.span`text-appcolor px-4 transform -skew-x-12 inline-block`;
   const HighlightedTextInverse = tw.span`bg-gray-100 text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
@@ -31,7 +31,7 @@ export default function Map() {
       <Header />
       <MainFeature
         showMap={false}
-        bg={appcolor}
+        bg="appcolorfaded"
         heading={
           <>
             
