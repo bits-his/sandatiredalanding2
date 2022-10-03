@@ -5,7 +5,7 @@ import tw from "twin.macro";
 import Header from "components/headers/light.js";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
 import MainFeature1 from "components/features/TwoColWithButton.js";
-import TeamCardGrid from "components/cards/ProfileThreeColGrid.js";
+import TeamCardGrid from "components/cards/ProfileThreeColGridWithSlider";
 import Feature from "components/features/TwoColWithTwoTextColumn.js";
 import store11 from "images/app/stores/store-11.jpeg";
 // eslint-disable-next-line no-unused-vars
@@ -59,20 +59,20 @@ export default () => {
       /> */}
       <MainFeature2
         heading={<>Distribution Operations</>}
-        statistics={[
-          {
-            key: "Orders",
-            value: "94000+",
-          },
-          {
-            key: "Customers",
-            value: "11000+",
-          },
-          {
-            key: "Chefs",
-            value: "1500+",
-          },
-        ]}
+        // statistics={[
+        //   {
+        //     key: "Orders",
+        //     value: "94000+",
+        //   },
+        //   {
+        //     key: "Customers",
+        //     value: "11000+",
+        //   },
+        //   {
+        //     key: "Chefs",
+        //     value: "1500+",
+        //   },
+        // ]}
         description={
           <Description>
             The company’s operations cover Kano, Jigawa, Katsina, Kaduna and

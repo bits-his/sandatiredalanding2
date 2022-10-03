@@ -24,7 +24,7 @@ const Image = styled.div((props) => [
   `background-image: url("${props.imageSrc}");`,
   tw`rounded bg-contain bg-no-repeat bg-center h-full`,
 ]);
-const TextContent = tw.div`lg:py-8 text-center md:text-center`;
+const TextContent = tw.div`lg:py-8 md:text-center flex flex-row justify-center items-center `;
 const Subheading = tw(SubheadingBase)`text-center md:text-left`;
 const Heading = tw(
   SectionHeading
@@ -76,19 +76,9 @@ export default ({
     <>
     <Container bg={bg}>
     {heading && <Heading>{heading}</Heading>}
-      <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
-        <ImageColumn css={imageContainerCss}>
-          {imageInsideDiv ? (
-            <Image imageSrc={imageSrc} css={imageCss} />
-          ) : (
-            <img src={imageSrc} css={imageCss} alt="" />
-          )}
-          {imageDecoratorBlob && <DecoratorBlob css={imageDecoratorBlobCss} />}
-        </ImageColumn>
-        <TextColumn textOnLeft={textOnLeft}>
+  
           <TextContent>
-            {subheading && <Subheading>{subheading}</Subheading>}
-            {/* <Heading>{heading}</Heading> */}
+         
             <Description>{description}</Description>
             {/* <Statistics>
               {statistics.map((statistic, index) => (
@@ -102,8 +92,6 @@ export default ({
               {primaryButtonText}
             </PrimaryButton> */}
           </TextContent>
-        </TextColumn>
-      </TwoColumn>
     </Container>
         {/* <Container bg={bg}>
         <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>

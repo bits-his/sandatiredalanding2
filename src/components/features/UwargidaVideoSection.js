@@ -79,9 +79,9 @@ export default ({
     <Container bg={bg}>
     {heading && <Heading>{heading}</Heading>}
       <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
-        <div style={{display: 'flex', flexDirection:'row', alignItems: 'center', justifyContent: 'center'}}>
+        {/* <div style={{display: 'flex', flexDirection:'row', alignItems: 'center', justifyContent: 'center'}}>
           <YoutubeEmbed embedId="ihKnMeEO53c" />
-        </div>
+        </div> */}
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
             {subheading && <Subheading>{subheading}</Subheading>}
@@ -100,6 +100,9 @@ export default ({
             </PrimaryButton> */}
           </TextContent>
         </TextColumn>
+                <div style={{display: 'flex', flexDirection:'row', alignItems: 'center', justifyContent: 'center'}}>
+          <YoutubeEmbed embedId="ihKnMeEO53c" />
+        </div>
       </TwoColumn>
     </Container>
         {/* <Container bg={bg}>

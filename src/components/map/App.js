@@ -29,6 +29,119 @@ export default function Map() {
   return (
     <AnimationRevealPage>
       <Header />
+      <Feature
+        heading2={<span tw="text-appcolor">Mission</span>}
+        description2="To empower micro, small and medium enterprises through the use of technology"
+        heading1={<span tw="text-appcolor">Vision</span>}
+        description1="To create a business environment where micro, small and medium enterprises will thrive across Nigeria."
+      />
+
+<Features
+        heading={
+          <>
+            The <HighlightedText> Sanda </HighlightedText> Difference.
+          </>
+        }
+        cards={[
+          {
+            // imageSrc: shopIconImageSrc,
+            title: "Convenience",
+            description:
+              "We eliminate the need to travel to the market by delivering inventory to their shops free of charge.",
+            // url: "https://google.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Microcredit",
+            description:
+              "We offer credit of up to 200,000 naira in inventory to each Kirana Store on a 30-day cycle. ",
+            // url: "https://timerse.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Ease of Use",
+            description:
+              "We have a user-friendly mobile phone application where all orders from franchise stores are made. Increased Earning Capacity for Micro-Entrepreneurs.",
+            // url: "https://timerse.com"
+          },
+        ]}
+        imageContainerCss={tw`p-2!`}
+        imageCss={tw`w-20! h-20!`}
+      />
+
+<DownloadApp
+        text={
+          <>
+            Sanda Tireda leverages technology to monitor in real time its
+            operations stock in warehouses and Kirana Stores. Furthermore, Sanda
+            Tireda uses a mobile phone application to manage its sales and
+            inventories across the Kirana stores. All orders from franchise
+            stores are made via the app and goods are delivered to the Kirana’s
+            using Sanda’s dedicated fleet of over 30 vehicles.
+          </>
+        }
+      />
+
+<SDGsContainer
+        heading={
+          <>
+            Sustainable Development Goals (SDGs)
+          </>
+        }
+        cards={[
+          {
+            // imageSrc: shopIconImageSrc,
+            title: "Convenience",
+            description:
+              "We eliminate the need to travel to the market by delivering inventory to their shops free of charge.",
+            // url: "https://google.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Microcredit",
+            description:
+              "We offer credit of up to 200,000 naira in inventory to each Kirana Store on a 30-day cycle. ",
+            // url: "https://timerse.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Ease of Use",
+            description:
+              "We have a user-friendly mobile phone application where all orders from franchise stores are made.Increased Earning Capacity for Micro-Entrepreneurs.",
+            // url: "https://timerse.com"
+          },
+        ]}
+        imageContainerCss={tw`p-2!`}
+        imageCss={tw`w-20! h-20!`}
+        imgList={[sdgImgOne, sdgImgTwo, sdgImgThree]}
+
+      />
+
+<AuAspirations
+        // subheading={<Subheading>Distribution Operations</Subheading>}
+        heading={
+          <>African Union Development Agency-NEPAD (AUDA-NEPAD) Aspirations </>
+        }
+      
+        description={
+          <Description>
+            Kirana is a Sanda Tireda initiative that eases access to credit
+            facilities for small scale shop owners.
+          </Description>
+        }
+        primaryButtonText="Order Now"
+        primaryButtonUrl="https://order.now.com"
+        imageInsideDiv={false}
+        imageSrc={aspirationImgOne}
+        image2Src={aspirationImgSix}
+        imageCss={Object.assign(tw`bg-cover`, imageCss)}
+        imageContainerCss={tw`md:w-1/2 h-auto`}
+        imageDecoratorBlob={true}
+        imageDecoratorBlobCss={tw`left-1/2 md:w-32 md:h-32 -translate-x-1/2 opacity-25`}
+        textOnLeft={false}
+        bg="appbg"
+      />
+
       <MainFeature
         showMap={false}
         bg="appcolorfaded"
@@ -67,117 +180,12 @@ export default function Map() {
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
       />
-      <Feature
-        heading2={<span tw="text-appcolor">Mission</span>}
-        description2="To empower micro, small and medium enterprises through the use of technology"
-        heading1={<span tw="text-appcolor">Vision</span>}
-        description1="To create a business environment where micro, small and medium enterprises will thrive across Nigeria."
-      />
-      <SDGsContainer
-        heading={
-          <>
-            Sustainable Development Goals (SDGs)
-          </>
-        }
-        cards={[
-          {
-            // imageSrc: shopIconImageSrc,
-            title: "Convenience",
-            description:
-              "We eliminate the need to travel to the market by delivering inventory to their shops free of charge.",
-            // url: "https://google.com"
-          },
-          {
-            // imageSrc: chefIconImageSrc,
-            title: "Microcredit",
-            description:
-              "We offer credit of up to 200,000 naira in inventory to each Kirana Store on a 30-day cycle. ",
-            // url: "https://timerse.com"
-          },
-          {
-            // imageSrc: chefIconImageSrc,
-            title: "Ease of Use",
-            description:
-              "We have a user-friendly mobile phone application where all orders from franchise stores are made.Increased Earning Capacity for Micro-Entrepreneurs.",
-            // url: "https://timerse.com"
-          },
-        ]}
-        imageContainerCss={tw`p-2!`}
-        imageCss={tw`w-20! h-20!`}
-        imgList={[sdgImgOne, sdgImgTwo, sdgImgThree]}
 
-      />
+
      
-      <AuAspirations
-        // subheading={<Subheading>Distribution Operations</Subheading>}
-        heading={
-          <>African Union Development Agency-NEPAD (AUDA-NEPAD) Aspirations </>
-        }
+
+
       
-        description={
-          <Description>
-            Kirana is a Sanda Tireda initiative that eases access to credit
-            facilities for small scale shop owners.
-          </Description>
-        }
-        primaryButtonText="Order Now"
-        primaryButtonUrl="https://order.now.com"
-        imageInsideDiv={false}
-        imageSrc={aspirationImgOne}
-        image2Src={aspirationImgSix}
-        imageCss={Object.assign(tw`bg-cover`, imageCss)}
-        imageContainerCss={tw`md:w-1/2 h-auto`}
-        imageDecoratorBlob={true}
-        imageDecoratorBlobCss={tw`left-1/2 md:w-32 md:h-32 -translate-x-1/2 opacity-25`}
-        textOnLeft={false}
-        bg="appbg"
-      />
-      <Features
-        heading={
-          <>
-            The <HighlightedText> Sanda </HighlightedText> Difference.
-          </>
-        }
-        cards={[
-          {
-            // imageSrc: shopIconImageSrc,
-            title: "Convenience",
-            description:
-              "We eliminate the need to travel to the market by delivering inventory to their shops free of charge.",
-            // url: "https://google.com"
-          },
-          {
-            // imageSrc: chefIconImageSrc,
-            title: "Microcredit",
-            description:
-              "We offer credit of up to 200,000 naira in inventory to each Kirana Store on a 30-day cycle. ",
-            // url: "https://timerse.com"
-          },
-          {
-            // imageSrc: chefIconImageSrc,
-            title: "Ease of Use",
-            description:
-              "We have a user-friendly mobile phone application where all orders from franchise stores are made. Increased Earning Capacity for Micro-Entrepreneurs.",
-            // url: "https://timerse.com"
-          },
-        ]}
-        imageContainerCss={tw`p-2!`}
-        imageCss={tw`w-20! h-20!`}
-      />
-      
-      
-      <DownloadApp
-        text={
-          <>
-            Sanda Tireda leverages technology to monitor in real time its
-            operations stock in warehouses and Kirana Stores. Furthermore, Sanda
-            Tireda uses a mobile phone application to manage its sales and
-            inventories across the Kirana stores. All orders from franchise
-            stores are made via the app and goods are delivered to the Kirana’s
-            using Sanda’s dedicated fleet of over 30 vehicles.
-          </>
-        }
-      />
       <Footer />
     </AnimationRevealPage>
   );

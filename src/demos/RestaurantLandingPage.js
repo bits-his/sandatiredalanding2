@@ -12,7 +12,6 @@ import Footer from "components/footers/FiveColumnWithInputForm.js";
 import BlogIndexPage from "pages/BlogIndex.js";
 import Portfolio from "components/cards/PortfolioTwoCardsWithImage.js";
 import ProfileThreeColGrid from "components/cards/ProfileThreeColGrid.js";
-import truckImgSrc from "images/app/truck4.png";
 import heroImage from "images/sandatireda-building.png";
 import Testimonial2 from "components/testimonials/TwoColumnWithImageAndProfilePictureReview.js";
 import SliderTest from "components/cards/ProductsSlider";
@@ -55,15 +54,15 @@ export default () => {
         // imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
       />
       
-      <Feature
+      {/* <Feature
         heading1={<span tw="text-appcolor">Vision</span>}
         heading2={<span tw="text-appcolor">Mission</span>}
         description2="Creating an environment which motivates and empowers sole traders, SME’s and businesses to thrive by providing direct access to household consumer goods and services."
         description1="To become a leading agent of development for sole traders and businesses trading food and household consumer goods."
-      />
+      /> */}
       <TabGrid heading={<>Our Products</>} />
       <Portfolio />
-      <BlogIndexPage />
+      {/* <BlogIndexPage /> */}
       <DownloadApp
         text={
           <>
@@ -77,7 +76,7 @@ export default () => {
           </>
         }
       />
-      <ProfileThreeColGrid />
+      {/* <ProfileThreeColGrid /> */}
       <SliderTest />
       <Testimonial
         subheading=""
