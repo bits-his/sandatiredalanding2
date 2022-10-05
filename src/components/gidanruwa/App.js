@@ -53,7 +53,7 @@ export default function Ruwa() {
 <SDGsContainer
         heading={
           <>
-          
+          [SR IMAGES]
           </>
         }
         cards={[
@@ -94,7 +94,7 @@ export default function Ruwa() {
       <SDGsContainer
         heading={
           <>
-          
+          Sustainable Development Goals (SDGs)
           </>
         }
         cards={[
@@ -151,7 +151,7 @@ export default function Ruwa() {
         textOnLeft={true}
       />
       <MainFeature2
-        heading={<></>}
+        heading={<>Testimonials</>}
         description={
           <Description>
             Lack of access to safe water sources is a leading risk factor for

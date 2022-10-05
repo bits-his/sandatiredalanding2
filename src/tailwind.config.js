@@ -19,7 +19,7 @@ module.exports = {
 
       appcolor: ' #800000',
       appcolorfaded:'#fff',
-      appbg: '#800000',
+      appbg: '#fff',
 
       // appcolor: '#F37021',
       // appcolorfaded:'#fef0e7',
