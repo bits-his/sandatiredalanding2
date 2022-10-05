@@ -10,7 +10,7 @@ import { ReactComponent as SvgDotPattern } from "images/dot-pattern.svg";
 import YoutubeEmbed from '../social/VideoEmbaded';
 // const Container = tw.div`bg-appcolor -mx-8 px-5`;
 const Container = styled.div((props) => [
-  props.bg ? tw`bg-white` : tw`bg-appbg`,
+  props.bg ? tw`bg-appcolorfaded` : tw`bg-appbg`,
   tw`-mx-8 px-5`,
 ]);
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24`;
@@ -79,9 +79,9 @@ export default ({
     <Container bg={bg}>
     {heading && <Heading>{heading}</Heading>}
       <TwoColumn css={!imageInsideDiv && tw`md:items-center`}>
-        <div style={{display: 'flex', flexDirection:'row', alignItems: 'center', justifyContent: 'center'}}>
+        {/* <div style={{display: 'flex', flexDirection:'row', alignItems: 'center', justifyContent: 'center'}}>
           <YoutubeEmbed embedId="ihKnMeEO53c" />
-        </div>
+        </div> */}
         <TextColumn textOnLeft={textOnLeft}>
           <TextContent>
             {subheading && <Subheading>{subheading}</Subheading>}
@@ -100,6 +100,9 @@ export default ({
             </PrimaryButton> */}
           </TextContent>
         </TextColumn>
+                <div style={{display: 'flex', flexDirection:'row', alignItems: 'center', justifyContent: 'center'}}>
+          <YoutubeEmbed embedId="ihKnMeEO53c" />
+        </div>
       </TwoColumn>
     </Container>
         {/* <Container bg={bg}>

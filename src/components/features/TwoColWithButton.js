@@ -12,7 +12,7 @@ import "../features/states.css";
 import { LogoLink } from "components/headers/light";
 
 const Container = styled.div((props) => [
-  props.bg ? tw`bg-white` : tw`bg-appcolorfaded`,
+  props.bg ? tw`bg-appcolorfaded` : tw`bg-appcolorfaded`,
   tw`-mx-8 px-5`,
 ]);
 const TwoColumn = tw.div`flex flex-col md:flex-row justify-between max-w-screen-xl mx-auto py-20 md:py-24 items-center`;

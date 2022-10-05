@@ -14,10 +14,10 @@ module.exports = {
       transparent: 'transparent',
 
       black: '#000',
-      white: '#FFCC2A',
+      white: '#800000',
       // white: '#fff',
 
-      appcolor: '#e65e0c',
+      appcolor: ' #800000',
       appcolorfaded:'#fff',
       appbg: '#fff',
 

@@ -12,7 +12,7 @@ import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 
 const Container = styled.div((props) => [
-  props.bg ? tw`bg-white` : tw`bg-appbg`,
+  props.bg ? tw`bg-white` : tw`bg-appcolorfaded`,
   tw`-mx-8 px-5`,
 ]);
 const Heading = tw(SectionHeading)`text-appcolor`;
@@ -28,7 +28,7 @@ const Column = styled.div`
 const Card = styled.a`
   ${tw`flex flex-col items-center text-center h-full mx-4 px-4 py-8 rounded transition-transform duration-300 hover:cursor-pointer transform hover:scale-105 `}
   .imageContainer {
-    ${tw`text-center rounded-full p-4 bg-gray-100`}
+    ${tw`text-center rounded-full p-4 bg-appcolor`}
     img {
       ${tw`w-8 h-8`}
     }

@@ -6,7 +6,13 @@ import Header from "components/headers/light.js";
 import Feature from "components/features/TwoColWithTwoTextColumn.js";
 import MainFeature from "components/features/TwoColWithButton.js";
 import Testimonial from "components/testimonials/TwoColumnWithImageAndRating.js";
-
+import sdgImgOne from "../../images/1.jpg";
+import sdgImgTwo from "../../images/2.jpg";
+import sdgImgThree from "../../images/33.jpg";
+import sdgImgOnes from "../../images/tank.jpg";
+import sdgImgTwos from "../../images/tank1.jpg";
+import sdgImgThrees from "../../images/tank2.jpg";
+import SDGsContainer from "components/features/SDGs_container";
 import MainFeature2 from "components/features/TwoColSingleFeatureWithStats2.js";
 import Footer from "components/footers/FiveColumnWithInputForm.js";
 import "./style.css";
@@ -43,12 +49,84 @@ export default function Ruwa() {
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
       />
+
+<SDGsContainer
+        heading={
+          <>
+          [SR IMAGES]
+          </>
+        }
+        cards={[
+          {
+            // imageSrc: shopIconImageSrc,
+            title: "Convenience",
+            description:
+              "We eliminate the need to travel to the market by delivering inventory to their shops free of charge.",
+            // url: "https://google.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Microcredit",
+            description:
+              "We offer credit of up to 200,000 naira in inventory to each Kirana Store on a 30-day cycle. ",
+            // url: "https://timerse.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Ease of Use",
+            description:
+              "We have a user-friendly mobile phone application where all orders from franchise stores are made.Increased Earning Capacity for Micro-Entrepreneurs.",
+            // url: "https://timerse.com"
+          },
+        ]}
+        imageContainerCss={tw`p-2!`}
+        imageCss={tw`w-20! h-20!`}
+        imgList={[sdgImgOnes, sdgImgTwos, sdgImgThrees]}
+
+      /> 
+
       <Feature
         heading1={<span tw="text-appcolor">Vision</span>}
         description1="To provide clean and accessible water to all."
         heading2={<span tw="text-appcolor">Mission</span>}
         description2="We aspire to become the leading provider of clean and accessible water in Northern Nigeria."
       />
+      <SDGsContainer
+        heading={
+          <>
+          Sustainable Development Goals (SDGs)
+          </>
+        }
+        cards={[
+          {
+            // imageSrc: shopIconImageSrc,
+            title: "Convenience",
+            description:
+              "We eliminate the need to travel to the market by delivering inventory to their shops free of charge.",
+            // url: "https://google.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Microcredit",
+            description:
+              "We offer credit of up to 200,000 naira in inventory to each Kirana Store on a 30-day cycle. ",
+            // url: "https://timerse.com"
+          },
+          {
+            // imageSrc: chefIconImageSrc,
+            title: "Ease of Use",
+            description:
+              "We have a user-friendly mobile phone application where all orders from franchise stores are made.Increased Earning Capacity for Micro-Entrepreneurs.",
+            // url: "https://timerse.com"
+          },
+        ]}
+        imageContainerCss={tw`p-2!`}
+        imageCss={tw`w-20! h-20!`}
+        imgList={[sdgImgOne, sdgImgTwo, sdgImgThree]}
+
+      /> 
+
+      
       <MainFeature2
         heading={<></>}
         bg="appbg"
@@ -73,7 +151,7 @@ export default function Ruwa() {
         textOnLeft={true}
       />
       <MainFeature2
-        heading={<></>}
+        heading={<>Testimonials</>}
         description={
           <Description>
             Lack of access to safe water sources is a leading risk factor for

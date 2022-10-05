@@ -13,7 +13,7 @@ import { ReactComponent as ArrowRightIcon } from "images/arrow-right-icon.svg";
 import { ReactComponent as SvgDecoratorBlob3 } from "images/svg-decorator-blob-3.svg";
 
 const Container = styled.div((props) => [
-  props.bg ? tw`bg-white` : tw`bg-appbg`,
+  props.bg ? tw`bg-appcolorfaded` : tw`bg-appcolorfaded`,
   tw`-mx-8 px-5`,
 ]);
 const Heading = tw(SectionHeading)`text-appcolor`;
