@@ -14,8 +14,8 @@ import gidaImg from "../../images/gida.jpg";
 import logo1 from "../../images/app/logo1.png";
 import UwargidaVideoSection from "components/features/UwargidaVideoSection";
 export default function Map() {
-  const Description = tw.span`inline-block mt-8 text-appcolorfaded`;
-  const HighlightedTextInverse = tw.span`text-appcolorfaded px-4 transform -skew-x-12 inline-block`;
+  const Description = tw.span`inline-block mt-8 text-appcolor`;
+  const HighlightedTextInverse = tw.span`text-appcolor px-4 transform -skew-x-12 inline-block`;
   const imageCss = tw`rounded-4xl`;
 
   return (
@@ -48,9 +48,10 @@ export default function Map() {
         description2="To empower women-owned enterprises and to enhance capacity development through the use of technology."
       />
       {/* <UwargidaVideoSection /> */}
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124888.39223894956!2d8.467080010570168!3d11.990945673377865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae80eff0fff3f1%3A0x85ff8700a3da54eb!2sKano!5e0!3m2!1sen!2sng!4v1662066547386!5m2!1sen!2sng" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <UwargidaVideoSection
         heading={<></>}
-        bg="appbg"
+        bg="appcolorfaded"
         description={
           <Description>
             Women are provided the opportunity to expand their small businesses
@@ -70,7 +71,6 @@ export default function Map() {
         imageDecoratorBlobCss={tw`left-1/2 md:w-32 md:h-32 -translate-x-1/2 opacity-25`}
         textOnLeft={false}
       />
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124888.39223894956!2d8.467080010570168!3d11.990945673377865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x11ae80eff0fff3f1%3A0x85ff8700a3da54eb!2sKano!5e0!3m2!1sen!2sng!4v1662066547386!5m2!1sen!2sng" width="600" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       <Testimonial
         subheading=""
         quote={

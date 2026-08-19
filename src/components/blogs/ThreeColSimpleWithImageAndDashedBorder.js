@@ -73,9 +73,9 @@ export default ({
     {
       imageSrc:
         "https://images.unsplash.com/photo-1579869847514-7c1a19d2d2ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
-      author: "Sadiq Baba Idris",
-      category: "Development",
-      title: "Efficient management of your social media assets",
+      author: "Sadiq .S. Haruna",
+      category: "Back-end Development",
+      title: "Creative, consistency, Action",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       // url: "https://timerse.com"
     }

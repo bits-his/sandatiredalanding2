@@ -1,5 +1,6 @@
 import React from "react";
 import tw from "twin.macro";
+import Feature from "components/features/TwoColWithTwoTextColumn.js";
 
 import map1Src from "images/app/map-transparent-white.png";
 import MainFeature2 from "components/features/TwoColWithButton.js";
@@ -12,6 +13,13 @@ export default ({
 }) => {
   return (
     <>
+      <Feature
+        heading1={<span tw="text-appcolor">Vision</span>}
+        heading2={<span tw="text-appcolor">Mission</span>}
+        description2="Creating an environment which motivates and empowers sole traders, SME’s and businesses to thrive by providing direct access to household consumer goods and services."
+        description1="To become a leading agent of development for sole traders and businesses trading food and household consumer goods."
+      />
+
       <MainFeature2
         heading={<>Kirana Frachise Network</>}
         description={
